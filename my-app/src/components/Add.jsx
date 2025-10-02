@@ -32,7 +32,7 @@ function Add() {
         </Fab>
       </Tooltip>
       <Modal open={open}  onClose={()=>setOpen(false)} >
-                <Stack p={5} spacing={4} width={{xs:'98%',sm:600}}  height={500} sx={{backgroundColor:'default',borderRadius:2, position:'absolute', margin:'auto',top:0,left:0,right:0,bottom:0}}>
+                <Stack p={5} spacing={4} width={{xs:'98%',sm:600}}  height={500} sx={{backgroundColor:'background.default',borderRadius:2, position:'absolute', margin:'auto',top:0,left:0,right:0,bottom:0}}>
                     <Typography textAlign={'center'} variant='h4' fontWeight={200} >Create Post</Typography>
                     <UserBox spacing={2} direction={'row'}>
                         <Avatar src='https://randomuser.me/api/portraits/men/28.jpg' />

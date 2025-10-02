@@ -21,18 +21,19 @@ const IconStack = styled(Stack)(({theme})=>({
   alignItems:'center',
 }))
 
-function Navbar() {
+function Navbar({mode}) {
   const [ menuOpen, setMenuOpen ] = useState(false)
-
 return (
   <>
     <AppBar position='sticky'>
-      <Toolbar sx={{backgroundColor:'info.light',display:'flex',justifyContent:'space-between'}} >
+      <Toolbar sx={{display:'flex',color:'text.default',justifyContent:'space-between'}} >
         <Stack direction={'row'} sx={{alignItems:'center'}} spacing={1}>
           <BiotechIcon fontSize='large' />
           <Typography sx={{display:{xs:'none',sm:'block'}}}  variant='h6'>TekNow</Typography>
         </Stack>
-      <InputBase startAdornment={<SearchIcon/>} sx={{backgroundColor:'white',p:{xs:0.2,sm:0.5,md:0.6},width:'40%'}} placeholder='Search'  />
+      <InputBase color='green' startAdornment={<SearchIcon sx={{color:'black'}} />} sx={{backgroundColor:'white',p:{xs:0.2,sm:0.5,md:0.6},width:'40%',"& .MuiInputBase-input::placeholder": {
+      color: "black",
+      opacity: 0.4}}} placeholder='Search'  />
       <IconStack direction={'row'} spacing={2} >
        <Stack direction={'row'} spacing={2} sx={{display:{xs:'none',sm:'flex'}}}>
        <Badge badgeContent='4' color='error'>

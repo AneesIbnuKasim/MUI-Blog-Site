@@ -26,9 +26,13 @@ const StyledListText = styled(ListItemText)(({theme})=>({
     }
 }))
 
-function Sidebar() {
+function Sidebar({mode, setMode}) {
+
+    const handleTheme = ()=>{
+        setMode(prev=> prev === 'light' ? 'dark' : 'light')
+    }
   return (
-    <Box p={{xs:0,sm:2}} sx={{backgroundColor:'white', flex:{xs:0.7,sm:1.5,lg:1},height:'100vh'}} >
+    <Box p={{xs:0,sm:2}} sx={{ flex:{xs:0.7,sm:1.5,lg:1},height:'100vh'}} >
         <Box position='fixed' >
 
         <List>
@@ -95,8 +99,8 @@ function Sidebar() {
                     </ListItemIcon>
                     <StyledListText>
                     <Switch
-  checked={true}
-  onChange={''}
+  checked={mode==='dark'}
+  onChange={handleTheme}
   slotProps={{ input: { 'aria-label': 'controlled' } }}
 />
                     </StyledListText>

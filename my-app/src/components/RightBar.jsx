@@ -14,7 +14,7 @@ import React from 'react'
 
 function RightBar() {
   return (
-    <Box p={2} sx={{backgroundColor:'white', display:{xs:'none',md:'block'}}} flex={2}>
+    <Box p={2} sx={{ display:{xs:'none',md:'block'}}} flex={2}>
         <Box position={'fixed'}>
         <Stack spacing={1}>
             <Typography variant='h6' fontWeight={200} >Online Friends</Typography>
