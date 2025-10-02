@@ -28,7 +28,9 @@ const StyledListText = styled(ListItemText)(({theme})=>({
 
 function Sidebar() {
   return (
-    <Box p={{xs:'0px',sm:2}} sx={{backgroundColor:'white', flexGrow:0.3,  borderRight:'1px solid gray',height:'100vh', position:'fixed'}} >
+    <Box p={{xs:0,sm:2}} sx={{backgroundColor:'white', flex:{xs:0.7,sm:1.5,lg:1},height:'100vh'}} >
+        <Box position='fixed' >
+
         <List>
             <ListItem disablePadding>
                 <ListItemButton component={''} href='a' >
@@ -101,6 +103,7 @@ function Sidebar() {
                 </ListItemButton>
             </ListItem>
         </List>
+  </Box>
         
         
   </Box>
